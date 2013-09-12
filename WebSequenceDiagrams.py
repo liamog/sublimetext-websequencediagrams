@@ -55,7 +55,7 @@ class WebsequencediagramsCommand(sublime_plugin.TextCommand):
 			region = view.find('(participant .*\n)+', 0)
 			participants = view.substr(region)
 			contents = participants + contents
-		style = "qsd"
+		style = "modern-blue"
 		pngFile = getTempPreviewPath(self.view)
 		if getSequenceDiagram(contents, pngFile, style) and preview:
 			print("Opening " + pngFile)

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>wsd</string>
+	</array>
+	<key>name</key>
+	<string>WebSequenceDiagrams</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>variable.participant.wsd</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.source.wsd</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.participant.wsd</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.source.wsd</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>string.message.wsd</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>generic keywords</string>
+			<key>match</key>
+			<string>(\w*)(-&gt;)(\w*)\s*(:)\s*(.*)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.source.wsd</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.participant.wsd</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>activate line</string>
+			<key>match</key>
+			<string>(^activate) (.*)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.source.wsd</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.participant.wsd</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>deactivate line</string>
+			<key>match</key>
+			<string>(^deactivate) (.*)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.source.wsd</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.title.wsd</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Title line</string>
+			<key>match</key>
+			<string>(^title) (.*)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.source.wsd</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.participant.wsd</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Tab stops like $1, $2...</string>
+			<key>match</key>
+			<string>(^participant) (.*)( as .* |
+)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.source.wsd</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.participant.wsd</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>string.note.wsd</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Notes</string>
+			<key>match</key>
+			<string>(^note right of|^note left of) (\w*)(.*)</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^//</string>
+			<key>end</key>
+			<string>$
+?</string>
+			<key>name</key>
+			<string>comment.line.double-slash.wsd</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.websequencediagrams</string>
+	<key>uuid</key>
+	<string>6699ad28-acfe-4eca-b127-850927e91fa1</string>
+</dict>
+</plist>

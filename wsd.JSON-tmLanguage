@@ -1,0 +1,59 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+{ "name": "WebSequenceDiagrams",
+  "scopeName": "source.websequencediagrams",
+  "fileTypes": ["wsd"],
+  "uuid": "6699ad28-acfe-4eca-b127-850927e91fa1",
+
+  "patterns": [
+    { "match": "(\\w*)(->)(\\w*)\\s*(:)\\s*(.*)",
+	  "captures" : { 
+	  		"1": { "name": "variable.participant.wsd" },
+	  		"2": { "name": "keyword.source.wsd" },
+	  		"3": { "name": "variable.participant.wsd" },
+	  		"4": { "name": "keyword.source.wsd" },
+	  		"5": { "name": "string.message.wsd" }
+	  		},
+  	  "comment": "generic keywords"
+	},
+    { "match": "(^activate) (.*)",
+	  "captures" : { 
+	  		"1": { "name": "keyword.source.wsd" },
+	  		"2": { "name": "variable.participant.wsd" }
+	  		},
+  	  "comment": "activate line"
+	},
+    { "match": "(^deactivate) (.*)",
+	  "captures" : { 
+	  		"1": { "name": "keyword.source.wsd" },
+	  		"2": { "name": "variable.participant.wsd" }
+	  		},
+  	  "comment": "deactivate line"
+	},
+    { "match": "(^title) (.*)",
+	  "captures" : { 
+	  		"1": { "name": "keyword.source.wsd" },
+	  		"2": { "name": "string.title.wsd" }
+	  		},
+  	  "comment": "Title line"
+	},
+	{ "match": "(^participant) (.*)( as .* |\n)",
+	  "captures" : { 
+	  		"1": { "name": "keyword.source.wsd" },
+	  		"2": { "name": "variable.participant.wsd" }
+	  		},
+  	  "comment": "Tab stops like $1, $2..."
+	},
+    { "match": "(^note right of|^note left of) (\\w*)(.*)",
+	  "captures" : { 
+	  		"1": { "name": "keyword.source.wsd" },
+	  		"2": { "name": "variable.participant.wsd" },
+	  		"3": { "name": "string.note.wsd" }
+	  		},
+  	  "comment": "Notes"
+	},
+	{	"name": "comment.line.double-slash.wsd",
+		"begin": "^//",
+		"end": "$\n?"
+	}
+  ]
+}
